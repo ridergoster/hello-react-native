@@ -1,34 +1,34 @@
 import React, {useCallback} from 'react';
 import {Button, Platform, StyleSheet, Text, View} from 'react-native';
 
-export default function Home(props) {
-  const {navigation} = props;
-
-  const onBack = useCallback(() => navigation.goBack(), [navigation]);
-
-  const onNavigate = useCallback(() => navigation.navigate('Details'), [
-    navigation,
-  ]);
-
-  const onPush = useCallback(() => navigation.push('Details'), [navigation]);
-
-  return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome to HOME</Text>
-      <Text style={styles.instructions}>{instructions}</Text>
-      <Button title="Go back" onPress={onBack} />
-      <Button title="Navigate Details" onPress={onNavigate} />
-      <Button title="Push Details" onPress={onPush} />
-    </View>
-  );
-}
-
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
+
+export default function DetailsScreen(props) {
+  const {navigation} = props;
+
+  const onBack = useCallback(() => navigation.goBack(), [navigation]);
+
+  const onNavigate = useCallback(() => navigation.navigate('Home'), [
+    navigation,
+  ]);
+
+  const onPush = useCallback(() => navigation.push('Home'), [navigation]);
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.welcome}>Welcome to DETAILS</Text>
+      <Text style={styles.instructions}>{instructions}</Text>
+      <Button title="Go back" onPress={onBack} />
+      <Button title="Navigate Home" onPress={onNavigate} />
+      <Button title="Push Home" onPress={onPush} />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
