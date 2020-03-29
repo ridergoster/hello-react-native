@@ -16,6 +16,8 @@ export default function Home(props) {
     navigation,
   ]);
 
+  const onPushMap = useCallback(() => navigation.push('Map'), [navigation]);
+
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome to HOME</Text>
@@ -24,6 +26,7 @@ export default function Home(props) {
       <Button title="Navigate Details" onPress={onNavigate} />
       <Button title="Push Cat" onPress={onPushCat} />
       <Button title="Push Breeds" onPress={onPushBreeds} />
+      <Button title="Push Map" onPress={onPushMap} />
     </View>
   );
 }

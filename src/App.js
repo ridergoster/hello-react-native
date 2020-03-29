@@ -7,6 +7,7 @@ import HomeScreen from './screens/Home';
 import DetailsScreen from './screens/Details';
 import BreedsScreen from './screens/Breeds';
 import CatScreen from './screens/Cat';
+import MapScreen from './screens/Map';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Stack.Screen name="Details" component={DetailsScreen} />
         <Stack.Screen name="Breeds" component={BreedsScreen} />
         <Stack.Screen name="Cat" component={CatScreen} />
+        <Stack.Screen name="Map" component={MapScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
