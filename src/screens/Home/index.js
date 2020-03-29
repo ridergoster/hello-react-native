@@ -10,7 +10,7 @@ export default function Home(props) {
     navigation,
   ]);
 
-  const onPush = useCallback(() => navigation.push('Details'), [navigation]);
+  const onPush = useCallback(() => navigation.push('Cat'), [navigation]);
 
   return (
     <View style={styles.container}>
@@ -18,7 +18,7 @@ export default function Home(props) {
       <Text style={styles.instructions}>{instructions}</Text>
       <Button title="Go back" onPress={onBack} />
       <Button title="Navigate Details" onPress={onNavigate} />
-      <Button title="Push Details" onPress={onPush} />
+      <Button title="Push Cat" onPress={onPush} />
     </View>
   );
 }
