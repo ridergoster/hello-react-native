@@ -10,7 +10,11 @@ export default function DetailsScreen(props) {
     navigation,
   ]);
 
-  const onPush = useCallback(() => navigation.push('Cat'), [navigation]);
+  const onPushCat = useCallback(() => navigation.push('Cat'), [navigation]);
+
+  const onPushBreeds = useCallback(() => navigation.push('Breeds'), [
+    navigation,
+  ]);
 
   return (
     <View style={styles.container}>
@@ -18,7 +22,8 @@ export default function DetailsScreen(props) {
       <Text style={styles.instructions}>{instructions}</Text>
       <Button title="Go back" onPress={onBack} />
       <Button title="Navigate Home" onPress={onNavigate} />
-      <Button title="Push Cat" onPress={onPush} />
+      <Button title="Push Cat" onPress={onPushCat} />
+      <Button title="Push Breeds" onPress={onPushBreeds} />
     </View>
   );
 }

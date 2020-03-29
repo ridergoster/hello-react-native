@@ -5,14 +5,16 @@ import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 
 import HomeScreen from './screens/Home';
 import DetailsScreen from './screens/Details';
+import BreedsScreen from './screens/Breeds';
 import CatScreen from './screens/Cat';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Details" screenOptions={screenOptions}>
+      <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Breeds" component={BreedsScreen} />
         <Stack.Screen name="Cat" component={CatScreen} />
       </Stack.Navigator>
     </NavigationContainer>
